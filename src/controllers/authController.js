@@ -91,6 +91,7 @@ exports.profile = async (req, res, next) => {
   try {
     if (!req.user) {
       res.status(401).send("Not authorized!");
+      return;
     }
 
     res.json({
